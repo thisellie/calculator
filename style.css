@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+}
+
+#calculator {
+    /* https://stackoverflow.com/questions/31217268/center-div-on-the-middle-of-screen */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 12px -3px rgba(109, 109, 109, 0.45);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#display {
+    height: 175px;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #575757;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+#input {
+    height: 400px;
+    display: flex;
+}
+
+#numbers, #operators{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    row-gap: 10px;
+}
+
+#numbers {
+    padding: 10px;
+    background-color: #363636;
+    color: #fff;
+    display: grid;
+    grid-template: repeat(3, 87px) / repeat(3, 87px);
+    align-items: center;
+    text-align: center;
+
+}
+
+div#clear {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+#operators {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #545454;
+    color: #fff;
+    width: 87px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
