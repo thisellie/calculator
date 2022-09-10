@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body {
-    background-color: #F2F2F2;
-    display: flex;
-    justify-content: center;
-}
+body { background-color: #F2F2F2; }
 
 #calculator {
     /* https://stackoverflow.com/questions/31217268/center-div-on-the-middle-of-screen */
+    padding: 25px;
+    background-color: #434343;
+    width: 370px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,54 +18,70 @@ body {
 }
 
 #display {
-    height: 175px;
-    background-color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    color: #575757;
+    border: 15px solid rgb(95, 95, 95);
+    background-color: rgb(142, 141, 122);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#equation {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding-right: 20px;
-}
-
-#input {
-    height: 400px;
-    display: flex;
-}
-
-#numbers, #operators{
+    height: 75px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    row-gap: 10px;
+    font-size: 50px;
+    padding-left: 10px;
+    color: rgb(71, 68, 68);
 }
 
-#numbers {
-    padding: 10px;
-    background-color: #363636;
-    color: #fff;
-    display: grid;
-    grid-template: repeat(3, 87px) / repeat(3, 87px);
+#result {
+    display: flex;
     align-items: center;
-    text-align: center;
-
+    justify-content: right;
+    height: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    padding-right: 10px;
+    text-align: right;
+    color: rgb(71, 68, 68);
 }
 
-div#clear {
-    font-weight: 400;
-    font-size: 20px;
-}
-
-
-#operators {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: #545454;
-    color: #fff;
-    width: 87px;
+#keys {
     display: grid;
-    align-items: center;
-    text-align: center;
+    grid-template: 40px repeat(4, 1fr) / repeat(4, 1fr);
+    gap: 10px 10px;
+    background-color: transparent;
+    /* padding: 20px; */
 }
+
+#clear { 
+    font-weight: 600;
+    background-color: rgb(207, 152, 80);
+    border: none;
+    color: rgb(59, 59, 59);
+    grid-area: 1 / 1 / 2 / 3; 
+    font-size: 25px;
+}
+#backspace { 
+    font-weight: 600;
+    background-color: rgb(207, 152, 80);
+    border: none;
+    color: rgb(59, 59, 59);
+    grid-area: 1 / 3 / 2 / 5; 
+    font-size: 25px;
+}
+
+.operators, #equal {
+    background-color: rgb(223, 220, 220);
+    color: rgb(59, 59, 59);
+    border: none;
+}
+
+button {
+    background-color: rgb(57, 57, 57);
+    border: 1px solid #625d5d;
+    padding: 0;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+} 
